@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" data-use="197015" data-accent-color="#ff0800" data-color-pref="intense" class="scroll-smooth scroll-pt-6">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#37435e" />
+    <link rel="stylesheet" href="/assets/built/index.css?v=13bbc6e784" />
+    <link rel="preload" href="/assets/fonts/montseratt.woff2?v=13bbc6e784" as="font" type="font/woff2" crossorigin/>
+    <script src="/assets/built/index.js?v=13bbc6e784" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/rosu-catalin/ghostcdn@latest/dist/script.js" defer></script>
+    <title>SkylineMC</title>
+    <meta name="description" content="SkylineMC">
+    <link rel="icon" href="images/LOGO-GAME.png" type="image/png">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+    <style>
+        :root {
+            --ghost-accent-color: #e2f1fa;
+        }
+    </style>
+    <style>
+        @font-face {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 400;
+            src: url(/assets/fonts/montseratt.woff2?v=13bbc6e784) format("woff2");
+            font-display: swap;
+            unicode-range: U+000-5FF;
+        }
+
+        /* latin */
+
+        @font-face {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 500;
+            src: url(/assets/fonts/montseratt.woff2?v=13bbc6e784) format("woff2");
+            font-display: swap;
+            unicode-range: U+000-5FF;
+        }
+
+        /* latin */
+
+        @font-face {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 700;
+            src: url(/assets/fonts/montseratt.woff2?v=13bbc6e784) format("woff2");
+            font-display: swap;
+            unicode-range: U+000-5FF;
+        }
+
+        :root {
+            --complementary: #6ab6e2;
+            --complementary-fade: #0e70f1fb;
+            --header-img: url(https://applemc.fun/content/images/2024/06/minecraft-7680x4320-2.jpg);
+            --opacity-header-img: 0.8;
+            --blur-header-img: 0px;
+            --header-img-size: 550px;
+        }
+    </style>
+</head>
+
+<body class="bg-surface-dark font-body text-element-darker antialiased text-[1rem]">
+
+
+
+    <div class="sr-only focus-within:not-sr-only focus-within:absolute focus-within:left-4 focus-within:top-20 focus-within:z-130">
+        <a href="#main" class="inline-flex items-center rounded-md bg-gradient-to-r from-brand-color to-complementary px-4 py-2 text-base font-medium text-button-text shadow-sm hover:bg-gray-50 focus:outline-none">
+        Skip to main content
+    </a>
+    </div>
+    <div class="header-splash">
+        <picture>
+            <source srcset="
+                    /content/images/2024/06/minecraft-7680x4320-2.jpg 558w,
+                    /content/images/size/w808/format/avif/2024/06/minecraft-7680x4320-2.jpg 808w,
+                    /content/images/size/w1200/format/avif/2024/06/minecraft-7680x4320-2.jpg 1200w," sizes="(min-width: 880px) 880px, 100vw" type="image/avif">
+            <source srcset="
+                    /content/images/2024/06/minecraft-7680x4320-2.jpg 558w,
+                    /content/images/size/w808/format/webp/2024/06/minecraft-7680x4320-2.jpg 808w,
+                    /content/images/size/w1200/format/webp/2024/06/minecraft-7680x4320-2.jpg 1200w," sizes="(min-width: 880px) 880px, 100vw" type="image/webp">
+            <source srcset="
+                    /content/images/2024/06/minecraft-7680x4320-2.jpg 558w,
+                    /content/images/size/w808/format/gif/2024/06/minecraft-7680x4320-2.jpg 808w,
+                    /content/images/size/w1200/format/gif/2024/06/minecraft-7680x4320-2.jpg 1200w," sizes="(min-width: 880px) 880px, 100vw" type="image/gif">
+            <img srcset="
+                    /content/images/2024/06/minecraft-7680x4320-2.jpg 558w,
+                    /content/images/size/w808/2024/06/minecraft-7680x4320-2.jpg 808w,
+                    /content/images/size/w1200/2024/06/minecraft-7680x4320-2.jpg 1200w" sizes="(min-width: 880px) 880px, 100vw" src="/content/images/size/w1200/2024/06/minecraft-7680x4320-2.jpg" alt="" class="h-full object-cover w-full" width="2000"
+                height="550">
+        </picture>
+    </div>
+
+    <header class="relative isolate z-10">
+
+        <div class="mx-auto max-w-[1360px] px-2.5">
+            <div class="grid place-items-center pt-16 lg:grid-cols-3">
+
+                <button class="mt-auto hidden items-center gap-4 outline-none transition-all hover:drop-shadow-header_button focus-visible:drop-shadow-header_button lg:flex group" aria-label="Copy server IP: play.sky.line.pm" data-server-ip="play.sky.line.pm" x-data="{
+        copyText: '',
+        copyNotification: false,
+        async copyToClipboard() {
+            try {
+             await navigator.clipboard.writeText('play.sky.line.pm');
+            this.copyNotification = true;
+            let that = this;
+            const timeout = setTimeout(() => {
+                that.copyNotification = false;
+                clearTimeout(timeout);
+            }, 2000);
+            } catch (err) {
+                console.error('Failed to copy: ', err);
+            }
+        }
+    }" @click="copyToClipboard()">
+            <span class="relative">
+                    <svg aria-hidden="true" width="50" height="50" fill="url(#gradientIcon)">
+                        <use xlink:href='/assets/built/icons.svg?v=13bbc6e784#play'></use>
+                            <defs>
+                            <linearGradient id="gradientIcon" x1="0%" y1="0%" x2="100%" y2="0%">
+                              <stop offset="0%" stop-color="var(--brand-color)" stop-opacity="1"/>
+                                <stop offset="0%" stop-color="var(--brand-color)" stop-opacity="1"/>
+                              <stop offset="100%" stop-color="var(--complementary)" stop-opacity="1"/>
+                            </linearGradient>
+                          </defs>
+                    </svg>
+                </span>
+
+                <span class="flex flex-col font-bold uppercase">
+                    <span
+                        class="text-base bg-gradient-to-r bg-clip-text text-transparent from-brand-color to-complementary group-hover:translate-x-0.5 transition-all">
+                        <span class="sr-only">Join our server</span>
+                        play.sky.line.pm
+                    </span>
+                    <span class="inline-flex text-xs text-white group-hover:translate-x-1 transition-all">
+                        <span x-show="!copyNotification" aria-hidden="true">Click to copy</span>
+                        <span x-show="copyNotification" x-cloak aria-hidden="true">IP Copied</span>
+                    </span>
+                </span>
+            </button>
+
+                <a href="/" class="flex justify-center outline-none">
+                    <picture>
+                        <!-- Serve the AVIF format if the browser supports it -->
+                        <source srcset="/content/images/size/w600/format/avif/2024/04/Untitled-1-1--2--6.png 600w" sizes="(min-width: 1460px) 447px, (min-width: 1040px) calc(26.75vw + 62px), (min-width: 660px) 600px, 94.12vw" type="image/avif">
+                        <!-- Serve the WebP format if the browser supports it -->
+                        <source srcset="/content/images/size/w600/format/webp/2024/04/Untitled-1-1--2--6.png 600w" sizes="(min-width: 1460px) 447px, (min-width: 1040px) calc(26.75vw + 62px), (min-width: 660px) 600px, 94.12vw" type="image/webp">
+                        <!-- Serve original file format as a fallback -->
+                        <img srcset="/content/images/size/w600/2024/04/Untitled-1-1--2--6.png 600w" sizes="(min-width: 1460px) 447px, (min-width: 1040px) calc(26.75vw + 62px), (min-width: 660px) 600px, 94.12vw" src="/content/images/size/w600/2024/04/Untitled-1-1--2--6.png" class="animate-none"
+                            alt="SkylineMC - Logo" width="600" height="600">
+                    </picture>
+                </a>
+
+            </div>
+
+            <nav class="relative mt-6" x-data="{ open: false }" @click.outside="open = false">
+                <div class="flex items-center justify-between rounded-md px-5 py-6 bg-surface-85 lg:py-0">
+                    <button class="flex items-center gap-3 rounded-md text-base font-bold text-white lg:hidden" aria-label="Toggle Mobile Navigation Menu" aria-controls="mobile-nav" data-mobile-toggler x-bind:aria-expanded="open ? 'true' : 'false'" x-on:click="open = !open">
+                <div class="relative flex w-8 items-center justify-center" aria-hidden="true">
+      <span x-bind:class="open ? 'translate-y-0 rotate-45' : '-translate-y-2'"
+            class="absolute w-full transform rounded-md transition h-[3px] bg-brand-color"></span>
+
+                    <span x-bind:class="open ? 'opacity-0 translate-x-3' : 'opacity-100'"
+                          class="absolute w-full transform rounded-md transition h-[3px] bg-brand-color"></span>
+
+                    <span x-bind:class="open ? 'translate-y-0 -rotate-45' : 'translate-y-2'"
+                          class="absolute w-full transform rounded-md transition h-[3px] bg-brand-color"></span>
+                </div>
+                <span class="sr-only">Toggle Mobile Navigation</span> Menu
+            </button>
+
+                    <ul class="hidden lg:flex">
+
+                        <li class="group/item">
+                            <a href="/" class="relative flex items-center gap-2 px-6 py-10 text-base font-bold text-white outline-none">
+                                <svg aria-hidden="true" width="32" height="32" fill="currentColor">
+                                    <use xlink:href='/assets/built/icons.svg?v=13bbc6e784#home'></use>
+                                </svg>
+                                Home
+                                <span
+                                    aria-hidden="true"
+                                    class="absolute bottom-0 left-1/2 w-1/2 -translate-x-1/2 transform rounded-full drop-shadow-2xl filter transition-all h-[3px] bg-brand-color text-brand-color"
+                                ></span>
+                            </a>
+                        </li>
+                        <li class="group/item">
+                            <a href="rules/index.html" class="group-focus-within:/item:text-white relative flex items-center gap-2 px-6 py-10 text-base font-bold group-hover/item:text-white outline-none transition-all">
+                                <svg aria-hidden="true" width="32" height="32"
+                                     fill="currentColor">
+                                    <use xlink:href='/assets/built/icons.svg?v=13bbc6e784#rules'></use>
+                                </svg>
+                                Rules
+                                <span
+                                    aria-hidden="true"
+                                    class="absolute bottom-0 left-1/2 w-0 group-hover/item:w-1/2 -translate-x-1/2 transform rounded-full drop-shadow-2xl filter transition-all h-[3px] bg-brand-color text-brand-color"
+                                ></span>
+                            </a>
+                        </li>
+                        <li class="group/item">
+                            <a href="vote/index.html" class="group-focus-within:/item:text-white relative flex items-center gap-2 px-6 py-10 text-base font-bold group-hover/item:text-white outline-none transition-all">
+                                <svg aria-hidden="true" width="32" height="32"
+                                     fill="currentColor">
+                                    <use xlink:href='/assets/built/icons.svg?v=13bbc6e784#vote'></use>
+                                </svg>
+                                Vote
+                                <span
+                                    aria-hidden="true"
+                                    class="absolute bottom-0 left-1/2 w-0 group-hover/item:w-1/2 -translate-x-1/2 transform rounded-full drop-shadow-2xl filter transition-all h-[3px] bg-brand-color text-brand-color"
+                                ></span>
+                            </a>
+                        </li>
+                        <li class="group/item">
+                            <a href="staff/index.html" class="group-focus-within:/item:text-white relative flex items-center gap-2 px-6 py-10 text-base font-bold group-hover/item:text-white outline-none transition-all">
+                                <svg aria-hidden="true" width="32" height="32"
+                                     fill="currentColor">
+                                    <use xlink:href='/assets/built/icons.svg?v=13bbc6e784#staff'></use>
+                                </svg>
+                                Staff
+                                <span
+                                    aria-hidden="true"
+                                    class="absolute bottom-0 left-1/2 w-0 group-hover/item:w-1/2 -translate-x-1/2 transform rounded-full drop-shadow-2xl filter transition-all h-[3px] bg-brand-color text-brand-color"
+                                ></span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <a href="https://store.sky.line.pm" target="_blank" class="inline-flex cursor-pointer items-center justify-center gap-2 rounded-md bg-gradient-to-br px-5 py-4 text-center text-base font-bold shadow-sm transition-all text-button-text from-brand-color via-complementary to-complementary hover:opacity-80">
+                <svg aria-hidden="true" width="24" height="24"
+                     class="transition-all"
+                     fill="currentColor">
+                    <use xlink:href='/assets/built/icons.svg?v=13bbc6e784#store'></use>
+                </svg>
+                <span>
+                    <span class='sr-only sm:not-sr-only'>Visit our</span> Store
+                </span>
+            </a>
+
+                </div>
+
+                <ul x-cloak x-show="open" x-transition:enter="transition ease-in duration-100" x-transition:enter-start="opacity-0 -translate-y-3" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-out duration-50" x-transition:leave-start="opacity-100"
+                    x-transition:leave-end="opacity-0 -translate-y-10" class="absolute mt-2 w-full flex-col rounded-md shadow-2xl transition-all bg-surface-85 lg:hidden">
+                    <li class="">
+                        <a href="/" class="relative flex gap-2 first-of-type:rounded-t-md px-6 py-8 text-base font-bold text-white bg-surface-light">
+                            <svg aria-hidden="true" width="26" height="26" fill="currentColor">
+                                <use xlink:href='/assets/built/icons.svg?v=13bbc6e784#home'></use>
+                            </svg>
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="group/item">
+                        <a href="rules/index.html" class="relative flex gap-2 px-6 py-8 text-base font-bold group-hover/item:text-white transition-all">
+                            <svg aria-hidden="true" width="26" height="26" fill="currentColor">
+                                <use xlink:href='/assets/built/icons.svg?v=13bbc6e784#rules'></use>
+                            </svg>
+                            Rules
+                        </a>
+                    </li>
+
+                    <li class="group/item">
+                        <a href="vote/index.html" class="relative flex gap-2 px-6 py-8 text-base font-bold group-hover/item:text-white transition-all">
+                            <svg aria-hidden="true" width="26" height="26" fill="currentColor">
+                                <use xlink:href='/assets/built/icons.svg?v=13bbc6e784#vote'></use>
+                            </svg>
+                            Vote
+                        </a>
+                    </li>
+
+                    <li class="group/item">
+                        <a href="staff/index.html" class="relative flex gap-2 px-6 py-8 text-base font-bold group-hover/item:text-white transition-all">
+                            <svg aria-hidden="true" width="26" height="26" fill="currentColor">
+                                <use xlink:href='/assets/built/icons.svg?v=13bbc6e784#staff'></use>
+                            </svg>
+                            Staff
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+
+
+        </div>
+    </header>
+    <main class="mx-auto max-w-[1360px] px-2.5 mb-8" id="main" data-use="%%__USER__%%">
+        <div class="mt-4">
+            <div class="grid sm:grid-cols-auto-fit-cards gap-4">
+            </div>
+        </div>
+
+
+    </main>
+    <footer class="bg-surface-85" data-use="197015">
+        <div class="mx-auto grid items-start gap-10 py-8 max-w-[1360px] px-2.5 text-balance sm:grid-cols-2 lg:grid-cols-3">
+            <div class="flex flex-col gap-4">
+                <picture>
+                    <source srcset="/content/images/size/w48/format/avif/2024/04/128X128.png 48w,
+        /content/images/size/w80/format/avif/2024/04/128X128.png 80w,
+        /content/images/size/w120/format/avif/2024/04/128X128.png 120w" sizes="(max-width: 120px) 100vw, 120px" type="image/avif">
+                    <source srcset="/content/images/size/w48/format/webp/2024/04/128X128.png 48w,
+        /content/images/size/w80/format/webp/2024/04/128X128.png 80w,
+        /content/images/size/w120/format/webp/2024/04/128X128.png 120w" sizes="(max-width: 120px) 100vw, 120px" type="image/webp">
+                    <img src="/content/images/size/w120/2024/04/128X128.png" alt="SkylineMC" loading="lazy" decoding="async" width="120" height="120">
+                </picture>
+                <p class="text-sm">
+                    Greetings from SkylineMC! Our server is mostly dedicated to SMP game types, including Oneblock, Earth SMP, Lifesteal, and Survival. Join other players and together experience an unforgettable gameplay!
+                </p>
+            </div>
+            <div class="flex flex-col gap-2">
+                <h3 class="text-xl font-bold text-brand-color">Other Links</h3>
+                <nav aria-label="Footer">
+                    <ul class="grid gap-1">
+                        <li>
+                            <a href="https://form.jotform.com/241944649501056" class="text-sm transition-all hover:text-white">
+                    Apply
+                </a>
+                        </li>
+                        <li>
+                            <a href="https://discord.gg/nNtfjJNzq9" class="text-sm transition-all hover:text-white">
+                    Discord
+                </a>
+                        </li>
+                    <li>
+                        <a href="/" class="text-sm transition-all hover:text-white">
+                    Twitter
+                </a>
+                        </li>
+                        <li>
+                        <a href="/" class="text-sm transition-all hover:text-white">
+                    Youtube
+                </a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+            <div class="flex flex-col items-start gap-3">
+                <h3 class="text-xl font-bold text-brand-color">Support our server</h3>
+                <p class="text-sm text-balance leading-[1.5]">
+                    Our server thrives on community support to provide you with an exceptional Minecraft experience. By purchasing from our selection of exclusive items and packages, you not only enhance your gameplay but also contribute directly to the upkeep and improvement of our family-friendly server.
+                </p>
+                <a href="https://store.sky.line.pm" target="_blank" class="inline-flex gap-2 cursor-pointer items-center justify-center rounded-lg bg-gradient-to-br px-4 py-3 text-center text-base font-bold shadow-sm transition-all text-button-text from-brand-color via-complementary to-complementary hover:opacity-80">
+        <svg aria-hidden="true" width="24" height="24"
+             class="transition-all"
+             fill="currentColor">
+            <use xlink:href='/assets/built/icons.svg?v=13bbc6e784#store'></use>
+        </svg>
+        <span>
+            <span class='sr-only sm:not-sr-only'>Visit our</span> Store
+        </span>
+    </a>
+
+            </div>
+        </div>
+
+        <div class="pb-6 bg-surface">
+            <div aria-hidden="true" class="mb-6 w-full bg-gradient-to-r from-transparent to-transparent h-[1px] via-border-color"></div>
+            <div class="mx-auto flex flex-col gap-2 max-w-[1360px] px-2.5 sm:flex-row sm:items-center sm:justify-between">
+                <p class="grid text-sm font-bold text-white">
+                    &copy; 2024 SkylineMC. All rights reserved.
+                    <span class="text-xs font-normal text-element-darker">
+                We are not affiliated with Minecraft or Mojang AB.
+                </span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
